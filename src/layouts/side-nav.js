@@ -116,8 +116,8 @@ export const SideNav = (props) => {
       priority: 1,
     },
     {
-      link: "https://rightofboom.com",
-      imagesrc: theme === "light" ? "/sponsors/RoB-light.svg" : "/sponsors/RoB.png",
+      link: "https://www.domotz.com/cipp-community-free-domotz-beta.php?utm_source=Community_CIPP&utm_medium=Community_CIPP&utm_campaign=Community_CIPP",
+      imagesrc: theme === "light" ? "/sponsors/domotz-light.png" : "/sponsors/domotz-dark.png",
       priority: 1,
     },
     {
@@ -133,6 +133,11 @@ export const SideNav = (props) => {
     {
       link: "https://huntress.com",
       imagesrc: "/sponsors/huntress_teal.png",
+      priority: 1,
+    },
+    {
+      link: "https://rightofboom.com/rob-2026-overview/rob-2026-registration/?utm_source=CIPP&utm_medium=referral&utm_campaign=CIPPM365&utm_content=cta_button",
+      imagesrc: theme === "light" ? "/sponsors/RoB-light.png" : "/sponsors/RoB.png",
       priority: 1,
     },
   ];
@@ -226,14 +231,20 @@ export const SideNav = (props) => {
                     sx={{
                       display: "flex",
                       justifyContent: "center",
+                      alignItems: "center",
+                      height: "55px", // Fixed height for the container
                     }}
                   >
                     <img
                       src={randomimg.imagesrc}
                       alt="sponsor"
-                      style={{ cursor: "pointer" }}
+                      style={{
+                        cursor: "pointer",
+                        maxHeight: "50px", // Limit the height of the image
+                        width: "auto",
+                        maxWidth: "100px", // Maintain aspect ratio with max width
+                      }}
                       onClick={() => window.open(randomimg.link)}
-                      width={"100px"}
                     />
                   </Box>
                 </>
